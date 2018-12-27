@@ -108,5 +108,6 @@ if __name__ == '__main__':
     seed = 100  # Fix the random seed
     n_step = 1450  # Run the training procedure for 1450 steps.
     data = Dataset(seed=seed)  # Initialize the toy data object.
+    print(data)
     vis = Visualization(save_animation=False)  # Create the visualization and optionally save the resulting animation.
     model = GAN(n_step=n_step, callback=vis.plot_progress, seed=seed).fit(data)  # Fit the data and plot the progress.
